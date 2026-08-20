@@ -72,7 +72,7 @@ Vivado does not run natively on macOS. Use Docker to run it in an Ubuntu contain
 Install the open-source VHDL toolchain natively:
 
 ```bash
-brew install ghdl gtkwave
+brew install ghdl surfer
 ```
 
 Simulate the core algorithm:
@@ -91,7 +91,7 @@ ghdl -a --std=08 \
 
 ghdl -e --std=08 MiniBatchGradientDescentTest
 ghdl -r --std=08 MiniBatchGradientDescentTest --vcd=sim.vcd
-gtkwave sim.vcd
+surfer sim.vcd
 ```
 
 To add self-checking assertions (the current testbench is stimulus-only), use [cocotb](https://www.cocotb.org/):
